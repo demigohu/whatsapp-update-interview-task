@@ -1,0 +1,33 @@
+name: Nightly WhatsApp Sync (Demo)
+
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  run-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Run sync
+        run: npm start -- --csv "docs/interview/Whatsapp Data - Sheet.csv" --patients "docs/interview/patients-data.json" --out "out/patients-phone-updated.json"
+
+      - name: Upload output artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: patients-phone-updated
+          path: out/patients-phone-updated.json

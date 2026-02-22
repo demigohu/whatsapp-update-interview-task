@@ -1,0 +1,34 @@
+{
+  "name": "whatsapp-update-interview-task",
+  "version": "1.0.0",
+  "description": "Hi there, and thanks so much for taking the time to explore this challenge with us! We’re genuinely excited to learn more about how you think and build. Consider this repository your sandbox—feel free to take notes, experiment, and make it your own as you work through the exercise.",
+  "main": "dist/updatePhones.js",
+  "type": "commonjs",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/updatePhones.js",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demigohu/whatsapp-update-interview-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demigohu/whatsapp-update-interview-task/issues"
+  },
+  "homepage": "https://github.com/demigohu/whatsapp-update-interview-task#readme",
+  "dependencies": {
+    "csv-parse": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
