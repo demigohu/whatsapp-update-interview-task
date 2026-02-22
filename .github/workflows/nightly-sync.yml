@@ -2,7 +2,7 @@ name: Nightly WhatsApp Sync (Demo)
 
 on:
   schedule:
-    - cron: "0 14 * * *"
+    - cron: "30 14 * * *"
   workflow_dispatch: {}
 
 jobs:
